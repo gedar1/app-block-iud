@@ -13,7 +13,7 @@ const ScreenLogin = () => {
     <SafeAreaView style={styles.containerSafeAreaView}>
       <ScreenBackground style={styles.container} >
         <FormLogin/>
-        <TextBasic message="Holaaa"/>
+        <TextBasic message="AppBlock"/>
       </ScreenBackground>
     </SafeAreaView>
   );
