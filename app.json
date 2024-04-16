@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "template-expo-atomic",
-    "slug": "template-expo-atomic",
+    "name": "AppBlockSales",
+    "slug": "app-block-sales",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
