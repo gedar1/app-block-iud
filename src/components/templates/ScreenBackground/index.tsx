@@ -8,12 +8,7 @@ const { width, height } = Dimensions.get("window");
 const ScreenBackground = ({children,style} :ITemplate) => {
   return (
     <ViewBasic style={style}>
-      <ImageBackground
-      style={styles.imageBackground}
-      source={require('../../../assets/images/app_bg.jpg')}
-      >
-        {children}
-      </ImageBackground>
+      {children}
     </ViewBasic>
   )
 }

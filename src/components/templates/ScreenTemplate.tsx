@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import {ButtonBasic, TextBasic,ViewBasic, PressableBasic} from '@atoms/';
-import { colors } from '@colors/';
+import { colors } from '@src/desingSystem/colors';
 import { getInfo } from '@services/';
 
 
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   viewbasic:{
     marginTop:10,
     borderRadius:10,
-    backgroundColor:colors.blue_Rgba_050
+    backgroundColor:colors.primary[300]
   },
   viewButton:{
     marginTop:10,

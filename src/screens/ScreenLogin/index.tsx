@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, StyleSheet, Dimensions } from "react-native";
 import React from "react";
-
+import { colors } from "@src/desingSystem";
 import { FormLogin } from "@organisms/";
 import { TextBasic } from "@atoms/";
 import { ScreenBackground } from "@templates/";
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     height: "100%",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor:'yellow'
+    backgroundColor: colors.white
   },
 });
 export default ScreenLogin;
