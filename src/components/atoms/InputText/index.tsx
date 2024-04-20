@@ -1,8 +1,8 @@
 import { View, Text, TextInput } from "react-native";
-import React from "react";
+import React, { FC } from "react";
 import { ITextInputBasic } from "@src/typings";
 
-const index = ({
+export const InputText:FC<ITextInputBasic> = ({
   autocapitalize = "none",
   handleOnChange,
   placeholder,
@@ -10,7 +10,7 @@ const index = ({
   secureText,
   style,
   value,
-}: ITextInputBasic) => {
+}) => {
   return (
       <TextInput
         autoCapitalize={autocapitalize}
@@ -25,4 +25,4 @@ const index = ({
   );
 };
 
-export default index;
+

@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, StyleSheet, Dimensions } from "react-native";
+import { SafeAreaView, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import { colors } from "@src/desingSystem";
 import { FormLogin } from "@organisms/";

@@ -1,13 +1,18 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { ButtonPressableBasic } from '@atoms/'
+import { PressableBasic, TextBasic } from '@atoms/'
+import { colors } from '@src/desingSystem'
 
-const ButtonWithLoader = () => {
+export const ButtonWithLoader = () => {
   return (
-  <ButtonPressableBasic>
-    
-  </ButtonPressableBasic>
+  <PressableBasic style={styles.pressableBasic}>
+    <TextBasic message='Loading...' />
+  </PressableBasic>
   )
 }
 
-export default ButtonWithLoader
+const styles = StyleSheet.create({
+  pressableBasic:{
+    backgroundColor:colors.primary.base
+  }
+});

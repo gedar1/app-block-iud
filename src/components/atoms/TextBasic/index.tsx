@@ -2,9 +2,6 @@ import { StyleSheet, Text } from 'react-native'
 import React,{ FC } from 'react'
 import { ITextBasic } from '../../../typings/BasicTypes'
 
-
-
-
 export const TextBasic : FC<ITextBasic> =({ children,message } ) => {
   const {container} = styles
   
@@ -24,4 +21,3 @@ const styles = StyleSheet.create({
 });
 
 
-export default TextBasic

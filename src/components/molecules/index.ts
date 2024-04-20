@@ -1,1 +1,2 @@
-export { default as InputWhitIcon } from './InputWhitIcon';
+export * from './InputWhitIcon';
+export * from './ButtonWithLoader';

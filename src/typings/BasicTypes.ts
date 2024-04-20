@@ -25,6 +25,14 @@ export interface ITextInputBasic {
     maxLength?:number,
     autocapitalize?: 'none'| 'sentences'| 'words'| 'characters'
 }
+
+export interface ITextInputWhitIcon extends ITextInputBasic {
+    iconColor:string
+  iconName?: any
+  iconSize?: number
+  isShowIcon?: boolean
+  styleView?: StyleProp<ViewStyle>
+}
 export interface IButtonBasic {
     title: string;
     color: string;

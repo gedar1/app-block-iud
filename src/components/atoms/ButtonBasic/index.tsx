@@ -1,9 +1,8 @@
 import { Button, StyleSheet } from 'react-native'
-import React from 'react'
+import React, { FC } from 'react'
 import { IButtonBasic } from '@src/typings/BasicTypes'
 
-
-const ButtonBasic= ({handleOnPress, color, title} : IButtonBasic) => {
+export const ButtonBasic : FC<IButtonBasic> = ({handleOnPress, color, title}) => {
   return (
    <Button
    title={title}
@@ -12,8 +11,6 @@ const ButtonBasic= ({handleOnPress, color, title} : IButtonBasic) => {
    />
   )
 }
-
-export default ButtonBasic
 
 const styles = StyleSheet.create({
     button:{

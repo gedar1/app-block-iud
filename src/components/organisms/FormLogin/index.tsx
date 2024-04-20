@@ -1,33 +1,39 @@
 import { View, StyleSheet, Dimensions } from "react-native";
 import React from "react";
-import { InputWhitIcon } from "@molecules/";
+import {InputWhitIcon}  from "@molecules/";
 import { ITextInputBasic } from "@typings/";
+import { colors } from "@src/desingSystem";
+import {ButtonWithLoader} from "@molecules/";
+import { InputText } from "@atoms/";
+
 
 
 const { width, height } = Dimensions.get("window");
 
 const FormLogin = () => {
-  const configTextInputPassword: ITextInputBasic = {
-    placeholder: "enter",
-    placeholderTextColor: "white",
-    style: styles.inputStyle,
-  };
+  // const configTextInputPassword: ITextInputBasic = {
+  //   placeholder: "enter",
+  //   placeholderTextColor: "gray",
+  //   style: styles.inputStyle,
+  // };
 
   return (
     <View style={styles.container}>
-      <InputWhitIcon
-        styleView={styles.inputStyleIcon}
-        isShowIcon={false}
-        textInputProps={configTextInputPassword}       
+      <InputText
+        style={styles.inputStyle}
+        placeholder="UserName"
+        placeholderTextColor="gray"      
       />
       <InputWhitIcon
-        styleView={styles.inputStyleIcon}
-        iconName="eye"
-        isShowIcon={true}
-        iconSize={20}
         iconColor="white"
-        textInputProps={configTextInputPassword}       
+        iconName="eye"
+        iconSize={20}
+        isShowIcon={true}
+        placeholder="password"
+        placeholderTextColor="gray"       
+        styleView={styles.inputStyleIcon}
       />
+      <ButtonWithLoader/>
     </View>
   );
 };
@@ -53,7 +59,7 @@ const styles = StyleSheet.create({
   },
   inputStyleIcon: {
     alignItems: 'center',
-    borderColor: "#bbb",
+    borderColor: colors.primary.base,
     borderRadius: width * 0.0194,
     borderWidth: 1,
     display:'flex',

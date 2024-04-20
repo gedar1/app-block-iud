@@ -1,8 +1,8 @@
 import { Pressable } from 'react-native'
-import React from 'react'
+import React, { FC } from 'react'
 import { IPressableBasic } from '@typings/'
 
-const PressableBasic = ({style,children} : IPressableBasic ) => {
+export const PressableBasic : FC<IPressableBasic> = ({style,children} ) => {
   return (
     <Pressable 
         style={style}
@@ -13,4 +13,3 @@ const PressableBasic = ({style,children} : IPressableBasic ) => {
   )
 }
 
-export default PressableBasic

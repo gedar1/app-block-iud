@@ -1,23 +1,22 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { FC } from "react";
 import { InputText } from "@atoms/";
 import { ITextInputWhitIcon } from "@typings/";
-import { Entypo } from "@expo/vector-icons";
+import { Entypo  } from "@expo/vector-icons";
 
 
-const InputWhitIcon = ({
+export const InputWhitIcon: FC<ITextInputWhitIcon> = ({
   iconColor,
   iconName = "eye-with-line",
   iconSize,
   isShowIcon,
   styleView,
-  textInputProps
-}: ITextInputWhitIcon) => {
+}) => {
 
   console.log(typeof isShowIcon)
   return (
     <View style={styleView}>
-      <InputText {...textInputProps} />
+      <InputText  />
       {isShowIcon ? 
         <Entypo
           color={iconColor}
@@ -29,4 +28,4 @@ const InputWhitIcon = ({
   );
 };
 
-export default InputWhitIcon;
+
