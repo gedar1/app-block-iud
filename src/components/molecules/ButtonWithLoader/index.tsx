@@ -1,18 +1,15 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+
+import React, { FC } from 'react'
 import { PressableBasic, TextBasic } from '@atoms/'
 import { colors } from '@src/desingSystem'
+import { IPressableBasic } from '@src/typings'
 
-export const ButtonWithLoader = () => {
+export const ButtonWithLoader :FC<IPressableBasic> = ({handleOnPress,style}) => {
   return (
-  <PressableBasic style={styles.pressableBasic}>
-    <TextBasic message='Loading...' />
+  <PressableBasic style={style} handleOnPress={handleOnPress}>
+    <TextBasic message='Login' />
   </PressableBasic>
   )
 }
 
-const styles = StyleSheet.create({
-  pressableBasic:{
-    backgroundColor:colors.primary.base
-  }
-});
+

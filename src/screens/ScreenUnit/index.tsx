@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const PageOne = () => {
+export const ScreenUnit = () => {
   return (
     <View>
-      <Text>PageOne</Text>
+      <Text>ScreenUnit</Text>
     </View>
   )
 }

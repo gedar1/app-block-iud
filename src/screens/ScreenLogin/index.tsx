@@ -8,7 +8,7 @@ import { ScreenBackground } from "@templates/";
 
 const { width, height } = Dimensions.get("window");
 
-const ScreenLogin = () => {
+export const ScreenLogin = () => {
   return (
     <SafeAreaView style={styles.containerSafeAreaView}>
       <ScreenBackground style={styles.container} >
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white
   },
 });
-export default ScreenLogin;
+

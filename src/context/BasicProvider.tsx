@@ -3,7 +3,9 @@ import {useBasicHook} from '@hooks/';
 
 
 export interface BasicProviderType {
-  message: string;
+  message: string
+  user: boolean
+  setUser:React.Dispatch<React.SetStateAction<boolean>>
   setMessage:React.Dispatch<React.SetStateAction<string>>
 }
 

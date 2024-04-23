@@ -1,14 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const PageOne = () => {
+export const ScreenStoresBlock = () => {
   return (
     <View>
-      <Text>PageOne</Text>
+      <Text>ScreenStoresBlock</Text>
     </View>
   )
 }
-
-
 
 const styles = StyleSheet.create({})

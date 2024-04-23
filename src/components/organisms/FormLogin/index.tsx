@@ -1,16 +1,21 @@
 import { View, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import {InputWhitIcon}  from "@molecules/";
-import { ITextInputBasic } from "@typings/";
 import { colors } from "@src/desingSystem";
 import {ButtonWithLoader} from "@molecules/";
 import { InputText } from "@atoms/";
+import { useBasicContext } from '@context/'
 
 
 
 const { width, height } = Dimensions.get("window");
 
 const FormLogin = () => {
+  const {setUser} = useBasicContext()
+  const handleButtonLogin = () => {
+    console.log('hola')
+      setUser(true)
+  }
   // const configTextInputPassword: ITextInputBasic = {
   //   placeholder: "enter",
   //   placeholderTextColor: "gray",
@@ -33,7 +38,7 @@ const FormLogin = () => {
         placeholderTextColor="gray"       
         styleView={styles.inputStyleIcon}
       />
-      <ButtonWithLoader/>
+      <ButtonWithLoader handleOnPress={handleButtonLogin} style={styles.pressableBasic}/>
     </View>
   );
 };
@@ -52,10 +57,10 @@ const styles = StyleSheet.create({
     width: "90%",
   },
   inputStyle: {
+    color: "white",
     height: height * 0.0639,
     paddingLeft: width * 0.0416,
     width: "90%",
-    color: "white",
   },
   inputStyleIcon: {
     alignItems: 'center',
@@ -68,6 +73,13 @@ const styles = StyleSheet.create({
     width: "80%",
     
   },
+  pressableBasic:{
+    backgroundColor:colors.primary.base,
+    height:height * 0.0639,
+    paddingLeft: width * 0.0416,
+    width: "80%",
+    
+  }
 });
 
 export default FormLogin;

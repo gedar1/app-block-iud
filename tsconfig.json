@@ -20,6 +20,7 @@
       "@templates/": ["src/components/templates/"],
       "@text/": ["src/desingSystem/text/text"],
       "@typings/": ["src/typings/BasicTypes"],
+      "@navigation/":["src/navigation"]
     }
   }
 }
