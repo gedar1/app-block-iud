@@ -5,6 +5,13 @@ export interface IViewBasic {
     children: ReactNode;
     style?: StyleProp<ViewStyle>;
 }
+export interface IViewLinearGradient extends IViewBasic {
+    children: ReactNode;
+    style?: StyleProp<ViewStyle>;
+    styleLinear?: StyleProp<ViewStyle>;
+    startColor:string
+    endColor:string
+}
 
 export interface ITextBasic {
     children?: ReactNode;
@@ -33,6 +40,12 @@ export interface ITextInputWhitIcon extends ITextInputBasic {
   isShowIcon?: boolean
   styleView?: StyleProp<ViewStyle>
 }
+export interface IIconType {
+iconColor:string
+  iconName?: any
+  iconSize?: number
+  styleViewIcon?: StyleProp<ViewStyle>
+}
 export interface IButtonBasic {
     title: string;
     color: string;
@@ -43,8 +56,8 @@ export interface IPressableBasic {
     color?: string;
     radius?: number;
     foreground?: boolean;
-    children: ReactNode;
-    handleOnPress?: () => void;
+    children?: ReactNode;
+    handleOnPress: () => void;
     handleOnPressIn?: () => void;
     handleOnPressOut?: () => void;
     style: StyleProp<ViewStyle>;

@@ -10,6 +10,7 @@
       "@context/": ["src/context/"],
       "@desingSystem/": ["src/desingSystem"],
       "@hooks/": ["src/hooks/"],
+      "@icon/": ["src/components/atoms"],
       "@metrics/": ["src/utils/helpers/metrics"],
       "@molecules/": ["src/components/molecules"],
       "@organisms/": ["src/components/organisms"],
