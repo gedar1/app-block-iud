@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { InputText } from "@atoms/";
 import { ITextInputWhitIcon } from "@typings/";
 import { Entypo  } from "@expo/vector-icons";
+import { Icon } from "@src/components/atoms/Icon";
 
 
 export const InputWhitIcon: FC<ITextInputWhitIcon> = ({
@@ -11,17 +12,19 @@ export const InputWhitIcon: FC<ITextInputWhitIcon> = ({
   iconSize,
   isShowIcon,
   styleView,
+  placeholder,
+  placeholderTextColor
 }) => {
 
   console.log(typeof isShowIcon)
   return (
     <View style={styleView}>
-      <InputText  />
+      <InputText  placeholder={placeholder} placeholderTextColor={placeholderTextColor}/>
       {isShowIcon ? 
-        <Entypo
-          color={iconColor}
-          name={iconName}
-          size={iconSize}
+        <Icon
+          iconColor={iconColor}
+          iconName={iconName}
+          iconSize={iconSize}
         />
       : null} 
     </View>
