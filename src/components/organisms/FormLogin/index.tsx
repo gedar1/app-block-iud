@@ -3,8 +3,9 @@ import React from "react";
 import {InputWhitIcon}  from "@molecules/";
 import { colors } from "@src/desingSystem";
 import {ButtonWithLoader} from "@molecules/";
-import { InputText } from "@atoms/";
+import { ButtonBasic, InputText } from "@atoms/";
 import { useBasicContext } from '@context/'
+import { moderateScale } from "@metrics/";
 
 
 
@@ -26,19 +27,20 @@ const FormLogin = () => {
     <View style={styles.container}>
       <InputText
         style={styles.inputStyle}
-        placeholder="UserName"
-        placeholderTextColor="gray"      
+        placeholder="username"
+        placeholderTextColor={colors.gray[100]}     
       />
       <InputWhitIcon
-        iconColor="white"
-        iconName="eye"
+        iconColor={colors.primary.base}
+        iconName="eye-with-line"
         iconSize={20}
         isShowIcon={true}
         placeholder="password"
-        placeholderTextColor="gray"       
+        placeholderTextColor={colors.gray[100]}       
         styleView={styles.inputStyleIcon}
       />
       <ButtonWithLoader handleOnPress={handleButtonLogin} style={styles.pressableBasic}/>
+      
     </View>
   );
 };
@@ -46,21 +48,25 @@ const FormLogin = () => {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    borderColor: "#bbb",
+    borderColor: colors.primary.base,
     borderRadius: width * 0.0194,
     borderWidth: 1, 
     display: "flex",
     height: 'auto',
     justifyContent: "center",
-    padding:10,
+    paddingHorizontal:moderateScale(10),
+    paddingVertical:moderateScale(40),
     rowGap:20,
     width: "90%",
   },
   inputStyle: {
+    borderColor: colors.primary.base,
+    borderRadius: width * 0.0194,
+    borderWidth: 1,
     color: "white",
     height: height * 0.0639,
     paddingLeft: width * 0.0416,
-    width: "90%",
+    width: "80%",
   },
   inputStyleIcon: {
     alignItems: 'center',
@@ -69,16 +75,22 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     display:'flex',
     flexDirection:"row",
+    justifyContent: 'space-between',
     height:height * 0.0639,
+    paddingLeft: width * 0.0416,
+    paddingRight: width * 0.0416,
     width: "80%",
     
   },
   pressableBasic:{
-    backgroundColor:colors.primary.base,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor:colors.primary[400],
+    borderRadius: width * 0.0194,
+    display:'flex',
     height:height * 0.0639,
     paddingLeft: width * 0.0416,
-    width: "80%",
-    
+    width: moderateScale(150), 
   }
 });
 
