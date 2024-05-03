@@ -1,30 +1,35 @@
-import { View, Text, ImageBackground, StyleSheet, Dimensions } from 'react-native'
-import React, { PropsWithChildren } from 'react'
-import { ViewBasic } from '@atoms/'
-import { ITemplate } from '@typings/';
-import { BannerScreen } from '@organisms/';
+import {
+  View,
+  Text,
+  ImageBackground,
+  StyleSheet,
+  Dimensions,
+  SafeAreaView
+} from "react-native";
+import React, { PropsWithChildren } from "react";
+import { ViewBasic } from "@atoms/";
+import { ITemplate } from "@typings/";
+import { BannerScreen } from "@organisms/";
+import { moderateScale } from "@metrics/";
+
 
 const { width, height } = Dimensions.get("window");
 
-const ScreenBackground = ({children,style} :ITemplate) => {
+const ScreenBackground = ({ children, style, styleContent}: ITemplate) => {
   return (
+    <SafeAreaView style={styles.containerSafeAreaView} >
     <ViewBasic style={style}>
-      <BannerScreen/>
-      {children}
+      <BannerScreen />
+      <ViewBasic style= {styleContent}>{children}</ViewBasic>
     </ViewBasic>
-  )
-}
-
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
-  imageBackground: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    width: width,
-    height: "100%",
-    alignItems: "flex-start",
-    backgroundColor:'gray'
+  containerSafeAreaView: {
+    flex: 1,
+    paddingTop:moderateScale(25)
   },
 });
-export default ScreenBackground
+export default ScreenBackground;

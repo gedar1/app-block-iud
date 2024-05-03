@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     width:'80%',
     height:'80%',
-    backgroundColor:colors.white,
+    backgroundColor:colors.gray[25],
     alignItems: 'center',
     justifyContent: 'center',
   },

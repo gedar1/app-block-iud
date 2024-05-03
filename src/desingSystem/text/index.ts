@@ -2,7 +2,7 @@ import { moderateScale } from "@metrics/";
 
 
 
-export const textBasicText = {
+export const textBasic = {
   regular: {
     fontWeight: "400",
   },
