@@ -1,16 +1,32 @@
-import { Pressable } from 'react-native'
-import React, { FC } from 'react'
-import { IPressableBasic } from '@typings/'
+import { Pressable } from "react-native";
+import React, { FC } from "react";
+import { IPressableBasic } from "@typings/";
+import { useNavigation } from "@react-navigation/native";
 
-export const PressableBasic : FC<IPressableBasic> = ({style,children,handleOnPress} ) => {
+export const PressableBasic: FC<Partial<IPressableBasic>> = ({
+  style,
+  children,
+  handleOnPress,
+  handleOnPressComponent,
+  navigateTo,
+}) => {
+  const navigation = useNavigation();
+
+  console.log(navigateTo);
+  const handleOnNavigation = () => {
+    navigation?.navigate(`${navigateTo}` as never);
+  };
+  handleOnPressComponent = () => {
+    if (navigateTo) {
+      handleOnNavigation();
+    }
+    if (handleOnPress) {
+      handleOnPress?.();
+    }
+  };
   return (
-    <Pressable 
-        style={style}
-        onPress={()=>handleOnPress()}
-    >
-       {children}
+    <Pressable style={style} onPress={handleOnPressComponent}>
+      {children}
     </Pressable>
-
-  )
-}
-
+  );
+};

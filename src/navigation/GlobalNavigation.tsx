@@ -1,15 +1,17 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 import {
   ScreenMenu,
   ScreenUnit,
   ScreenstoresExternal,
   ScreenStoresBlock,
   ScreenNotifications,
+  ScreenLogin,
 } from "@screens/";
-import React from "react";
-// import { useUserDataContext } from '../contexts'
 
-const Stack = createNativeStackNavigator();
+
+// import { useUserDataContext } from '../contexts'
+const Stack = createStackNavigator();
 
 export const GlobalNavigation = () => {
   // const { user } = useUserDataContext() ?? {}
@@ -18,11 +20,16 @@ export const GlobalNavigation = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName="ScreenMenu"
+      initialRouteName="ScreenLogin"
       screenOptions={{
         headerShown: false,
       }}
     >
+      <Stack.Screen
+        name="ScreenLogin"
+        options={{ headerShown: false }}
+        component={ScreenLogin}
+      />
       <Stack.Screen
         name="ScreenMenu"
         options={{ headerShown: false }}
@@ -51,3 +58,4 @@ export const GlobalNavigation = () => {
     </Stack.Navigator>
   );
 };
+export default GlobalNavigation;

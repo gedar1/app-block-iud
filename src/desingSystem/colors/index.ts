@@ -36,6 +36,10 @@ export const colors  = {
     200: "#73716e",
     100: "#8a8885",
     50: "#8a8885",
+    25: "eff0f3"
+  },
+  yellow:{
+    base:"#FCDB03"
   },
   white: "#fff",
   black: "#000",
