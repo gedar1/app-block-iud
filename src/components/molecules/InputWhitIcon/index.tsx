@@ -25,6 +25,7 @@ export const InputWhitIcon: FC<ITextInputWhitIcon> = ({
           iconColor={iconColor}
           iconName={iconName}
           iconSize={iconSize}
+          isSvg={false}
         />
       : null} 
     </View>

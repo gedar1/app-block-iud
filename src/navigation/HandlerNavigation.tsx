@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useBasicContext } from '@context/'
  
   import { ScreenLogin } from '@screens/'
@@ -11,9 +11,9 @@ import { GlobalNavigation } from './GlobalNavigation'
 
 //   return <GlobalNavigation />
 // }
-export const HandlerNavigation = () => {
+export const HandlerNavigation : FC= () => {
   const {user} = useBasicContext()
-
+console.log(user)
   if (!user) return <ScreenLogin />
  return <GlobalNavigation />
 

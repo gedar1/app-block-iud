@@ -4,10 +4,12 @@ import { PressableBasic, TextBasic } from '@atoms/'
 import { colors } from '@src/desingSystem'
 import { IPressableBasic } from '@src/typings'
 
-export const ButtonWithLoader :FC<IPressableBasic> = ({handleOnPress,style}) => {
+export const ButtonWithLoader :FC<Partial<IPressableBasic>> = ({style,styleText,navigateTo, handleOnPress}) => {
+  
+ 
   return (
-  <PressableBasic style={style} handleOnPress={handleOnPress}>
-    <TextBasic message='Login' />
+  <PressableBasic style={style}  navigateTo={navigateTo} handleOnPress={()=>handleOnPress?.()}>
+    <TextBasic message='Login' style={styleText}/>
   </PressableBasic>
   )
 }

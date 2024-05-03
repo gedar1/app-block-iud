@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { ScreenBackground } from '@templates/'
 
-export const ScreenMenu = () => {
+
+export const ScreenMenu  = () => {
   return (
-    <View>
+    <ScreenBackground>
       <Text>ScreenMenu</Text>
-    </View>
+    </ScreenBackground>
   )
 }
 

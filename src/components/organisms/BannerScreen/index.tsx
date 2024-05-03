@@ -6,18 +6,30 @@ import { Icon } from "@icon/";
 import { moderateScale, verticalScale } from "@metrics/";
 import { ViewLinearGradient } from "@src/components/molecules/LinearGradient";
 import { colors } from "@desingSystem/";
+import { useBasicContext } from "@context/";
 
 export const BannerScreen = () => {
+
+  const { setUser } = useBasicContext();
+  const handlePress = () => {
+    console.log("hola");
+    setUser(true);
+  };
   return (
     <ViewLinearGradient
       startColor={colors.primaryRgba[100]}
-      // style={styles.containerLinear}
       endColor={colors.primaryRgba[300]}
       styleLinear={styles.containerLinear}
     >
       <ViewBasic style={styles.container}>
         <Logo />
-        <Icon iconColor="yellow" iconName="cross" iconSize={30} />
+        <Icon
+          iconColor={colors.white}
+          iconName="cross"
+          iconSize={40}
+          isSvg={false}
+          navigateTo="ScreenUnit"
+        />
       </ViewBasic>
     </ViewLinearGradient>
   );
@@ -27,6 +39,7 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
     width: "100%",
     height: verticalScale(105),
     flexDirection: "row",

@@ -2,8 +2,11 @@ import 'react-native-gesture-handler';
 import { StyleSheet } from 'react-native';
 import { ScreenLogin } from '@screens/';
 import {BasicProvider} from '@context/';
-import { NavigationContainer } from '@react-navigation/native'
-import { HandlerNavigation } from '@navigation/';
+
+import { RootNavigator } from '@navigation/';
+
+
+
 
 
 
@@ -11,9 +14,10 @@ export default function App() {
  
   return (
     <BasicProvider>
-      <NavigationContainer>
-        <HandlerNavigation/>
-      </NavigationContainer>
+        <RootNavigator/>
+        {/* <HandlerNavigation/> */}
+        {/* <GlobalNavigation/> */}
+      
     </BasicProvider>
   );
 }

@@ -12,6 +12,7 @@
       "@hooks/": ["src/hooks/"],
       "@icon/": ["src/components/atoms"],
       "@metrics/": ["src/utils/helpers/metrics"],
+      "@helps/": ["src/utils/helpers/helps"],
       "@molecules/": ["src/components/molecules"],
       "@organisms/": ["src/components/organisms"],
       "@protons/": ["src/components/protons"],

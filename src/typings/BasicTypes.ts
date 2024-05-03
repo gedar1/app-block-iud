@@ -1,7 +1,11 @@
+
+import { ParamListBase, RouteProp } from '@react-navigation/native';
+import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import { ReactNode } from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { handleOnNavigation } from '../utils/helpers/helps';
 
-export interface IViewBasic {
+export interface  IViewBasic  {
     children: ReactNode;
     style?: StyleProp<ViewStyle>;
 }
@@ -13,9 +17,10 @@ export interface IViewLinearGradient extends IViewBasic {
     endColor:string
 }
 
+export type ScreenName = 'ScreenNotifications' | 'ScreenLogin' | 'ScreenMenu' | 'ScreenUnit' | 'ScreenstoresExternal' | 'ScreenStoresBlock';
 export interface ITextBasic {
-    children?: ReactNode;
-    style?:StyleProp<TextStyle>
+    children: ReactNode;
+    style:StyleProp<TextStyle>
     message:string
 }
 
@@ -45,26 +50,45 @@ iconColor:string
   iconName?: any
   iconSize?: number
   styleViewIcon?: StyleProp<ViewStyle>
+  children?: ReactNode
+  isSvg:boolean
+  handleOnPress: () => void
+  navigateTo: string 
+  navigator: StackScreenProps<any,any>
 }
 export interface IButtonBasic {
     title: string;
     color: string;
     handleOnPress : () => void;
+    navigateTo: string 
+    navigator: StackScreenProps<any,any>
 }
 export interface IPressableBasic {
-    borderless?: boolean;
-    color?: string;
-    radius?: number;
-    foreground?: boolean;
-    children?: ReactNode;
+    borderless: boolean;
+    color: string;
+    radius: number;
+    foreground: boolean;
+    children: ReactNode;
+    handleOnPressComponent: () => void;
     handleOnPress: () => void;
     handleOnPressIn?: () => void;
     handleOnPressOut?: () => void;
     style: StyleProp<ViewStyle>;
+    styleText : StyleProp<TextStyle>
+    navigateTo: string 
+    navigation: StackNavigationProp<any,any,any>;
 }
 
 export interface ITemplate {
     children?: ReactNode;
     style?:StyleProp<TextStyle>
+    styleContent?:StyleProp<ViewStyle>
     message?:string
+}
+
+export interface INavigationType {
+    navigateTo: string 
+    navigation: StackNavigationProp<any,any,any>;
+    route: RouteProp<any,any>;
+    handleOnPressNavigation: () => void;
 }
