@@ -36,7 +36,7 @@ const FormLogin :FC<Partial<INavigationType>> = ({navigateTo,navigation,handleOn
         iconSize={20}
         isShowIcon={true}
         placeholder="password"
-        placeholderTextColor={colors.gray[100]}
+        placeholderTextColor={colors.primary[100]}
         styleView={styles.inputStyleIcon}
       />
       <TextBasic
