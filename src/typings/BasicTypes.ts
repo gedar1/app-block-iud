@@ -61,7 +61,7 @@ export interface IButtonBasic {
     color: string;
     handleOnPress : () => void;
     navigateTo: string 
-    navigator: StackScreenProps<any,any>
+    handleOnPressComponent: () => void;
 }
 export interface IPressableBasic {
     borderless: boolean;

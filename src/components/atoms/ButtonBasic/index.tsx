@@ -1,16 +1,28 @@
 import { Button, StyleSheet } from 'react-native'
 import React, { FC } from 'react'
-import { IButtonBasic } from '@src/typings/BasicTypes'
+import { IButtonBasic } from '@typings/'
+import { useNavigation } from "@react-navigation/native";
 
-export const ButtonBasic : FC<IButtonBasic> = ({handleOnPress, color, title, navigator,navigateTo}) => {
-  const { navigation} = navigator ??{}
-  handleOnPress = () => {
-    navigation?.navigate(`${navigateTo}`)
-  }
+export const ButtonBasic : FC<IButtonBasic> = ({handleOnPress, color, title,navigateTo, handleOnPressComponent}) => {
+  
+  const navigation = useNavigation();
+
+  const handleOnNavigation = () => {
+    navigation?.navigate(`${navigateTo}` as never);
+  };
+  
+  handleOnPressComponent = () => {
+    if (navigateTo) {
+      handleOnNavigation();
+    }
+    if (handleOnPress) {
+      handleOnPress?.();
+    }
+  };
   return (
    <Button
    title={title}
-   onPress={handleOnPress}
+   onPress={handleOnPressComponent}
    color={color}
    />
   )
