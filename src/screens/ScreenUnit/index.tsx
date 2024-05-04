@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { ScreenBackground } from '@templates/'
 
 export const ScreenUnit = () => {
   return (
-    <View>
+    <ScreenBackground>
       <Text>ScreenUnit</Text>
-    </View>
+    </ScreenBackground>
   )
 }
 
