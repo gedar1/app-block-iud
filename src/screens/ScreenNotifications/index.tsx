@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { ScreenBackground } from "@templates/";
 
 export const ScreenNotifications = () => {
   return (
-    <View>
+    <ScreenBackground>
       <Text>ScreenNotifications</Text>
-    </View>
-  )
-}
+    </ScreenBackground>
+  );
+};
 
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

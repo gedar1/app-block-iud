@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get("window");
 
 export const ScreenLogin = () => {
   const handleOnPress = () => {
-    console.log('hollallal')
+    console.log('Screen Login')
   }
   return (
       <ScreenBackground style={styles.container} styleContent={styles.content}>

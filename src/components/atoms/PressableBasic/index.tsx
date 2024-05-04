@@ -12,10 +12,10 @@ export const PressableBasic: FC<Partial<IPressableBasic>> = ({
 }) => {
   const navigation = useNavigation();
 
-  console.log(navigateTo);
   const handleOnNavigation = () => {
     navigation?.navigate(`${navigateTo}` as never);
   };
+  
   handleOnPressComponent = () => {
     if (navigateTo) {
       handleOnNavigation();
