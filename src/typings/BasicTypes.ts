@@ -53,19 +53,31 @@ iconColor:string
   children?: ReactNode
   isSvg:boolean
   handleOnPress: () => void
+  isGoToBack:boolean
   navigateTo: string 
   navigator: StackScreenProps<any,any>
 }
 export interface IButtonBasic {
+    children:ReactNode
     title: string;
     color: string;
     handleOnPress : () => void;
     navigateTo: string 
     handleOnPressComponent: () => void;
 }
+export interface IButtonWhitIcon extends IIconType {
+    title: string;
+    color: string;
+    handleOnPress : () => void;
+    navigateTo: string 
+    handleOnPressComponent: () => void;
+    styleViewIcon?: StyleProp<ViewStyle>
+    styleText?:StyleProp<TextStyle>
+}
 export interface IPressableBasic {
     borderless: boolean;
     color: string;
+    title:string;
     radius: number;
     foreground: boolean;
     children: ReactNode;
@@ -80,6 +92,12 @@ export interface IPressableBasic {
 }
 
 export interface ITemplate {
+    children?: ReactNode;
+    style?:StyleProp<TextStyle>
+    styleContent?:StyleProp<ViewStyle>
+    message?:string
+}
+export interface IScrollViewList {
     children?: ReactNode;
     style?:StyleProp<TextStyle>
     styleContent?:StyleProp<ViewStyle>

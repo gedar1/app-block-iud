@@ -25,10 +25,10 @@ export const BannerScreen = () => {
         <Logo />
         <Icon
           iconColor={colors.white}
-          iconName="cross"
+          iconName="arrow-with-circle-left"
           iconSize={40}
           isSvg={false}
-          navigateTo="ScreenUnit"
+          isGoToBack={true}
         />
       </ViewBasic>
     </ViewLinearGradient>
