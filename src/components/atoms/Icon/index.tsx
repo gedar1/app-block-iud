@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React, { FC } from "react";
 import { Entypo  } from "@expo/vector-icons";
 import { IIconType } from "@src/typings";
+import { useNavigation } from "@react-navigation/native";
 
 
 export const Icon: FC<Partial<IIconType>> = ({
@@ -12,14 +13,14 @@ export const Icon: FC<Partial<IIconType>> = ({
   isSvg,
   children,
   handleOnPress,
-  navigator,
+  isGoToBack,
   navigateTo 
 }) => {
 
-  const { navigation} = navigator ??{}
+  const navigation = useNavigation();
 
   handleOnPress = () => {
-    navigation?.navigate(`${navigateTo}`)
+   isGoToBack ? navigation.goBack() : navigation?.navigate(`${navigateTo}` as never)
   }
   return (
     <View style={styleViewIcon}>

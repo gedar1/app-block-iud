@@ -14,10 +14,7 @@ export default function App() {
  
   return (
     <BasicProvider>
-        <RootNavigator/>
-        {/* <HandlerNavigation/> */}
-        {/* <GlobalNavigation/> */}
-      
+        <RootNavigator/>    
     </BasicProvider>
   );
 }
