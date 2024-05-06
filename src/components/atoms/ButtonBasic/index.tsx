@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { IButtonBasic } from '@typings/'
 import { useNavigation } from "@react-navigation/native";
 
-export const ButtonBasic : FC<IButtonBasic> = ({handleOnPress, color, title,navigateTo, handleOnPressComponent}) => {
+export const ButtonBasic : FC<Partial<IButtonBasic>> = ({handleOnPress, color, title,navigateTo, handleOnPressComponent}) => {
   
   const navigation = useNavigation();
 
@@ -21,7 +21,7 @@ export const ButtonBasic : FC<IButtonBasic> = ({handleOnPress, color, title,navi
   };
   return (
    <Button
-   title={title}
+   title={title ?? ''}
    onPress={handleOnPressComponent}
    color={color}
    />

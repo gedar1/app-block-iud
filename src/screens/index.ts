@@ -1,4 +1,3 @@
-export { default as PageIndex } from './PageIndex';
 export * from './ScreenLogin';
 export * from './ScreenMenu'
 export * from './ScreenNotifications'

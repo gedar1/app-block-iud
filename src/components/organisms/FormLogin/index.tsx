@@ -3,14 +3,14 @@ import React, { FC } from "react";
 import { InputWhitIcon } from "@molecules/";
 import { colors, textBasic } from "@src/desingSystem";
 import { ButtonWithLoader } from "@molecules/";
-import { InputText, TextBasic } from "@atoms/";
+import { InputText, TextBasic, ViewBasic } from "@atoms/";
 import { useBasicContext } from "@context/";
 import { moderateScale } from "@metrics/";
 import { INavigationType } from "@src/typings";
 
 const { width, height } = Dimensions.get("window");
 
-const FormLogin :FC<Partial<INavigationType>> = ({navigateTo,navigation,handleOnPressNavigation}) => {
+export const FormLogin :FC<Partial<INavigationType>> = ({navigateTo,navigation,handleOnPressNavigation}) => {
   const { setUser } = useBasicContext();
   
   // const handleButtonLogin = () => {
@@ -24,7 +24,7 @@ const FormLogin :FC<Partial<INavigationType>> = ({navigateTo,navigation,handleOn
   // };
 
   return (
-    <View style={styles.container}>
+    <ViewBasic style={styles.container}>
       <InputText
         style={styles.inputStyle}
         placeholder="username"
@@ -39,17 +39,21 @@ const FormLogin :FC<Partial<INavigationType>> = ({navigateTo,navigation,handleOn
         placeholderTextColor={colors.gray[100]}
         styleView={styles.inputStyleIcon}
       />
+      <ViewBasic style={styles.forgotContainer}>
+        
       <TextBasic
-        message="Forgot your password"
-        style={{ ...styles.textForgotPassword, ...textBasic.xxxs }}
+        message="Forgot your password?"
+        style={{ ...styles.textForgotPassword, ...textBasic.xxs }}
       />
+      </ViewBasic>
       <ButtonWithLoader
         handleOnPress={handleOnPressNavigation}
         style={styles.pressableBasic}
         styleText={styles.textButtonLogin}
-        navigateTo={navigateTo}      
+        navigateTo={navigateTo}  
+        title="Login"    
       />
-    </View>
+    </ViewBasic>
   );
 };
 
@@ -66,6 +70,13 @@ const styles = StyleSheet.create({
     paddingVertical: moderateScale(40),
     rowGap: 20,
     width: "90%",
+  },
+  forgotContainer: {
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
+    width: "90%",
+    height: 'auto'
   },
   inputStyle: {
     borderColor: colors.primary.base,
@@ -108,4 +119,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FormLogin;

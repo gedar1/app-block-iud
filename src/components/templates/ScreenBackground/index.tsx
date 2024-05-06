@@ -4,7 +4,7 @@ import {
   ImageBackground,
   StyleSheet,
   Dimensions,
-  SafeAreaView
+  SafeAreaView,
 } from "react-native";
 import React, { PropsWithChildren } from "react";
 import { ViewBasic } from "@atoms/";
@@ -12,16 +12,15 @@ import { ITemplate } from "@typings/";
 import { BannerScreen } from "@organisms/";
 import { moderateScale } from "@metrics/";
 
-
 const { width, height } = Dimensions.get("window");
 
-const ScreenBackground = ({ children, style, styleContent}: ITemplate) => {
+export const ScreenBackground = ({ children, style, styleContent }: ITemplate) => {
   return (
-    <SafeAreaView style={styles.containerSafeAreaView} >
-    <ViewBasic style={style}>
-      <BannerScreen />
-      <ViewBasic style= {styleContent}>{children}</ViewBasic>
-    </ViewBasic>
+    <SafeAreaView style={styles.containerSafeAreaView}>
+      <ViewBasic style={style}>
+        <BannerScreen />
+        <ViewBasic style={styleContent}>{children}</ViewBasic>
+      </ViewBasic>
     </SafeAreaView>
   );
 };
@@ -29,7 +28,7 @@ const ScreenBackground = ({ children, style, styleContent}: ITemplate) => {
 const styles = StyleSheet.create({
   containerSafeAreaView: {
     flex: 1,
-    paddingTop:moderateScale(25)
+    paddingTop: moderateScale(25),
   },
 });
-export default ScreenBackground;
+
