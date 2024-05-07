@@ -2,8 +2,9 @@
 
 import { Dimensions, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { ScrollViewList } from "@templates/";
-import { CardProduct } from '../CardProduct';
+
+import { CardProduct, ScrollViewList } from '@organisms/';
+
 
 const { width, height } = Dimensions.get("window");
 

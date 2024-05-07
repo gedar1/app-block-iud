@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     display: "flex",
-    gap: moderateScale(15),   
+    gap: moderateScale(30),   
     // height:hightVerticalScale(80),
     marginTop:verticalScale(12),
     alignItems: "center",
