@@ -1,0 +1,62 @@
+{
+  "person": {
+    "id": 12345,
+    "password": "$p4ss",
+    "name": "John Doe",
+    "email": "jd@example.com",
+    "adreess": "cra 20",
+    "nameBlock": "unidad san simon",
+    "apto": "501",
+    "phones": {
+      "home": "800-123-4567",
+      "mobile": "877-123-1234"
+    },
+    "registered": true,
+    "userType": "internal"
+  },
+  "store": {
+    "storeName" : "Helados ice",
+    "rattings" : 3,
+    "products": [
+      {
+        "idProduct": "1",
+        "category": "dinner",
+        "productName": "Ensalada de frutas",
+        "price": 0,
+        "imgurl": "https"
+      },
+      {
+        "idProduct": "2",
+        "category": "dinner",
+        "productName": "Cono sencillo",
+        "price": 0,
+        "imgurl": "https"
+      }
+    ]
+  }
+}
+
+// {
+//   "notifications":{
+//     "nameBlock": "unidad san simon",
+//     "adreess": "cra 20",
+//     "notes":[
+//       {"idNote" : "1",
+//         "message" : "Corte de energia",
+//         "date" : "2024-05-26"
+//       },
+//       {"idNote" : "2",
+//         "message" : "Corte de energia",
+//         "date" : "2024-05-21"
+//       },
+//       {"idNote" : "3",
+//         "message" : "Corte de energia",
+//         "date" : "2024-05-16"
+//       },
+//       {"idNote" : "4",
+//         "message" : "Corte de energia",
+//         "date" : "2024-05-12"
+//       },
+//     ]
+//   }
+// }

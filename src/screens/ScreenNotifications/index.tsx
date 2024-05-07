@@ -1,9 +1,7 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { ScreenBackground } from "@templates/";
-import { Notification } from "@molecules/";
-import { NotificationList } from "@organisms/";
 import { colors } from "@desingSystem/";
+import { NotificationList, ScreenBackground } from "@templates/";
+import React from "react";
+import { Dimensions, StyleSheet } from "react-native";
 
 
 const { width, height } = Dimensions.get("window");
