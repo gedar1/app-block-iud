@@ -52,10 +52,11 @@ iconColor:string
   styleViewIcon?: StyleProp<ViewStyle>
   children?: ReactNode
   isSvg:boolean
-  handleOnPress: () => void
+  handleOnPress: () => void | undefined
   isGoToBack:boolean
   navigateTo: string 
   navigator: StackScreenProps<any,any>
+  isOnPress: boolean
 }
 export interface IButtonBasic {
     children:ReactNode
@@ -109,4 +110,8 @@ export interface INavigationType {
     navigation: StackNavigationProp<any,any,any>;
     route: RouteProp<any,any>;
     handleOnPressNavigation: () => void;
+}
+export interface IStartRating {
+    rating: number  
+    onRatingChange: (rating: number) => void;
 }

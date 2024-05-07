@@ -14,13 +14,15 @@ export const Icon: FC<Partial<IIconType>> = ({
   children,
   handleOnPress,
   isGoToBack,
-  navigateTo 
+  navigateTo,
+  isOnPress 
 }) => {
 
   const navigation = useNavigation();
 
   handleOnPress = () => {
-   isGoToBack ? navigation.goBack() : navigation?.navigate(`${navigateTo}` as never)
+    if(!isOnPress) return;
+    isGoToBack ? navigation.goBack() : navigation?.navigate(`${navigateTo}` as never)
   }
   return (
     <View style={styleViewIcon}>

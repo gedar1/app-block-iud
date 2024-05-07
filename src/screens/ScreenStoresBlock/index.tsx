@@ -1,8 +1,8 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { ScreenBackground } from "@templates/";
 import { colors } from "@desingSystem/";
-import { CardProductList } from "@organisms/";
+import { CardProductList, ScreenBackground } from "@templates/";
+import { Dimensions, StyleSheet } from "react-native";
+
 
  const { width, height } = Dimensions.get("window");
 
