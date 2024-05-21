@@ -5,10 +5,11 @@ import { moderateScale } from "@metrics/";
 import { Icon, PressableBasic, TextBasic, ViewBasic } from "@atoms/";
 import { LinearGradient } from "expo-linear-gradient";
 import {StarRating} from "@molecules/";
+import { IListCard } from "@typings/";
 
 const { width, height } = Dimensions.get("window");
 
-export const CardProduct = () => {
+export const ListCard = ({price,description,nameProduct}:IListCard) => {
   return (
     <ViewBasic style={styles.container}>
       <LinearGradient
@@ -18,24 +19,16 @@ export const CardProduct = () => {
         style={styles.linearGradientHeader}
       >
         <ViewBasic style={styles.nameContainer}>
-        <Icon
-          iconName="chevron-thin-right"
-          iconSize={24}
-          iconColor={colors.white}
-        />
         <TextBasic
-          message={"NameStore"}
+          message={nameProduct}
           style={{ color: colors.white, ...textBasic.xs }}
         />
         </ViewBasic>
-        <TextBasic
-          message={"Apto 814"}
-          style={{ color: colors.white, ...textBasic.xs }}
-        />
+
       </LinearGradient>
       <PressableBasic style={styles.containerBody} navigateTo="ScreenListProduct">
         <Image
-          source={require("../../../../assets/images/mediumrectangle.png")}
+          source={require("../../../../../assets/images/mediumrectangle.png")}
         />
       </PressableBasic>
 
@@ -45,14 +38,15 @@ export const CardProduct = () => {
         end={{ x: 1, y: 1 }}
         style={styles.linearGradientFooter}
       >
-        <PressableBasic style={styles.phoneContainer} >
-        <Icon iconName="phone" iconSize={24} iconColor={colors.white} />
+        <ViewBasic style={styles.phoneContainer} >
+        
         <TextBasic
-          message={"3202020202"}
+          message={price}
           style={{ color: colors.white, ...textBasic.xs }}
         />
-        </PressableBasic >
-        <StarRating rating={3}/>
+        <TextBasic message= {description}/>
+        </ViewBasic >
+        
       </LinearGradient>
     </ViewBasic>
   );

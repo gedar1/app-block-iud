@@ -5,5 +5,6 @@ export * from './ScreenStoresExternal'
 export * from './ScreenStoresBlock'
 export * from './ScreenStoresExternal'
 export * from './ScreenUnit'
+export * from './ScreenListProduct'
 
 
