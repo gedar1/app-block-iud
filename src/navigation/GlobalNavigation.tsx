@@ -7,6 +7,7 @@ import {
   ScreenStoresBlock,
   ScreenNotifications,
   ScreenLogin,
+  ScreenListProduct,
 } from "@screens/";
 
 
@@ -54,6 +55,11 @@ export const GlobalNavigation = () => {
         name="ScreenNotifications"
         options={{ headerShown: false }}
         component={ScreenNotifications}
+      />
+      <Stack.Screen
+        name="ScreenListProduct"
+        options={{ headerShown: false }}
+        component={ScreenListProduct}
       />
     </Stack.Navigator>
   );
