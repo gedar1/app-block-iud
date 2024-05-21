@@ -1,14 +1,15 @@
-import { StyleSheet, Dimensions } from "react-native";
 import React from "react";
-import { CardProductList, ScreenBackground } from "@templates/";
 import { colors } from "@desingSystem/";
+import { CardProductList, ScreenBackground, StoreTemplate } from "@templates/";
+import { Dimensions, StyleSheet } from "react-native";
 
-const { width, height } = Dimensions.get("window");
 
-export const ScreenstoresExternal = () => {
+ const { width, height } = Dimensions.get("window");
+
+export const ScreenListProduct = () => {
   return (
     <ScreenBackground style={styles.container} styleContent={styles.content}>
-      <CardProductList/>
+      <StoreTemplate typeTemplate="listCard"/>
     </ScreenBackground>
   );
 };

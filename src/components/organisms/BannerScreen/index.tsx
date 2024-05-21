@@ -29,6 +29,7 @@ export const BannerScreen = () => {
           iconSize={40}
           isSvg={false}
           isGoToBack={true}
+          isOnPress={true}
         />
       </ViewBasic>
     </ViewLinearGradient>

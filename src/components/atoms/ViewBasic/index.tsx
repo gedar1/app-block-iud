@@ -6,7 +6,7 @@ import { IViewBasic } from '../../../typings/BasicTypes'
 
 export const ViewBasic : FC<IViewBasic> =({children,style}) => {
   return (
-    <View style={[styles.container,style]}>
+    <View style={[styles.container,style]} >
       { children }
     </View>
   )

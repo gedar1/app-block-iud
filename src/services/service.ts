@@ -1,8 +1,8 @@
 
 
-export const getInfo = async () => {
-  console.log('getInfo')
-  try { let response = await fetch('https://jsonplaceholder.typicode.com/users/1'); 
+export const getInfo = async (id:any) => {
+  console.log(id)
+  try { let response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`); 
         let data = await response.json();
         console.log(data); 
         return data;
