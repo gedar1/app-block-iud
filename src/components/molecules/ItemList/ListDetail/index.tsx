@@ -6,7 +6,7 @@ const { width, height } = Dimensions.get("window");
 export const ListDetail = () => {
   return (
     <View>
-      <Text>ListDetail</Text>
+      <Text>ListDetail-carlos</Text>
     </View>
   )
 }
